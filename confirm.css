@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Limbu&display=swap');
+
+/*<title> font-family: 'Noto Sans Limbu', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+Limbu&family=Noto+Serif+Khojki&display=swap');
+
+/* font-family: 'Lora', serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+Limbu&family=Noto+Serif+Khojki&family=Roboto:ital,wght@0,700;0,900;1,500&display=swap');
+/* Bold */
+
+/* default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Lora', serif;
+    color: #2A211E;
+
+}
+
+
+body {
+    background: #FFFAF5;
+}
+
+
+
+/* Library */
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+::selection {
+    background: #B48165;
+    color: #fff;
+}
+
+
+
+/*  */
+
+:root {
+    --color-bg: #FFF0EB;
+    --color-footer: #B48165;
+    --color-footer2: #B48165;
+    --color-text: #61504B;
+    --color-clair: #FFF9F6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Martel', serif;
+    color: var(--color-text);
+}
+
+h1{
+    font-size: clamp(40px, 5vw, 200px);
+}
+
+h1, h2, h3, h4{
+    font-family: 'Lora', serif;}
+
+h2 {
+    font-size: 48px;
+}
+
+main {
+    background-color: var(--color-bg);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 250px;
+    background-image: url("img/bg header accueil.png");
+    position: relative;
+}
+
+.barreHeader {
+    width: min(1240px,80%);
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    top: 75px;
+}
+
+.navLink {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoAhBas {
+    height: 75px;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.barreHeader nav a, .iconHeader a {
+    margin: 0 10px;
+}
+
+
+/* main */
+#confirm > img{
+    width: min(83px);
+}
+#confirm > h1{
+    /* font-size: clamp(3rem, 2.5vw, 5rem); */
+    /* font-size: clamp(25px, 3vw, 180px); */
+    font-family: 'Lora', serif;
+    font-size: 100px;
+
+}
+
+#confirm > h3, h5{
+    font-family: 'Lora', serif;
+    font-size: larger;
+
+}
+
+
+
+
+
+
+/* menu burger */
+
+.menuBurger {
+    display: none;
+}
+
+.menuBurger{
+    cursor: pointer;
+    width: 40px;
+    /* margin: 31px 16px 0 0; */
+    margin-right: 30px;
+
+}
+
+.menuBurger span {
+    width: 40px;
+    height: 6px;
+    margin: 5px;
+    border-radius: 61px;
+    background-color: var(--color-footer2);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuBurger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menuBurger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menuBurger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.active {
+    height: 90vh;
+}
+
+
+
+
+
+/* main */
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+@media (max-width: 990px) {
+
+    /* header */
+    .navLink {
+        display: none;
+    }
+
+    .menuBurger{
+        display: block;
+    }
+
+    .menuBurger span {
+        display: block;
+    }
+
+}

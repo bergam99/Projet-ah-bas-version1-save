@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ah-bas!</title>
+    <link rel="stylesheet" href="achat.css">
+</head>
+
+<body>
+    <!-- Logo -->
+    <header class="flex-logo flex">
+        <a href="#"><img src="img/vraiLogo.png" alt="logo"></a>
+    </header>
+
+    <!-- logo mobile -->
+    <header class="flex-logo logo-mobile">
+        <a href="#">
+            <h1>Ah-bas!</h1>
+        </a>
+    </header>
+
+    <!-- recapitulatif mobile -->
+
+    <section id="recap">
+        <div class="recap">
+            <div class="premiere-ligne flex line-height">
+                <p>RÉCAPITULATIF (n article)</p>
+                <p>+</p>
+            </div>
+            <div class="deuxieme-ligne flex line-height">
+                <p>Total</p>
+                <p>0.00</p>
+            </div>
+        </div>  
+    </section>
+
+
+
+    <main>
+        <!-- INFO PERSO -->
+
+        <section id="info-perso">
+            <!-- ==========CORDONNEES============ -->
+            <p class="underline line-height title">1. COORDONNÉES</p>
+            <br>
+            <p class="mention">Veuillez saisir votre adresse e-mail pour continuer en tant que nouveau client ou vous connecter à votre
+                compte personnel.</p>
+            <br>
+            <input type="email" placeholder="* E-mail" required>
+            <br><br><br>
+            <button type="submit"><a href="#coor"> Envoyer</a></button>
+            <br><br><br>
+            <!-- ==========EXPEDITION ET LIVRAISON============ -->
+            <p id="coor" class="underline line-height title id">2. EXPÉDITION ET LIVRAISON</p>
+            <p class="mention">Tous les champs (*) sont obligatoires.</p>
+            <br>
+            <br>
+            <p>*Civilité</p>
+
+            <!-- =============== CIVILITÉ ======================= -->
+            <select id="civilite" name="civilite">
+                <option value="mn" selected>Mm</option>
+                <option value="m">M.</option>
+            </select>
+            <br>
+
+            <!-- ================ NOM =================== -->
+            <div class="flex">
+                <input type="prenom" placeholder="* Prénom">
+                <input type="nom" placeholder="* Nom">
+            </div>
+            <br>
+
+            <!-- ================ PAY =================== -->
+            <p class="marge title">*Pays/Région</p>
+            <select id="civilite" name="civilite">
+                <option value="fr" selected>France</option>
+                <option value="su">Suisse</option>
+                <option value="al">Allemagne</option>
+                <option value="es">Espagne</option>
+            </select>
+            <br>
+
+            <!-- =============== ADRESSE ============== -->
+            <input type="adresse" placeholder="* Adresse">
+            <br>
+            <!-- =============SUPP====================== -->
+            <input type="supp" placeholder="Etage, esc, bat">
+            <br>
+            <!-- =============CODE POSTAL====================== -->
+            <div class="flex">
+                <input type="postal" placeholder="* Code postal">
+                <input type="ville" placeholder="* Ville">
+            </div>
+            <!-- <br> -->
+            <!-- =============PHONE====================== -->
+            <input type="phone" placeholder="* Téléphone">
+            <!-- Button submit -->
+            <br><br><br>
+            <button><a href="#liv"> Choisir la méthode de livraison</a></button>
+            <br><br><br>
+
+
+            <!-- livraison -->
+            <p id="liv" class="underline line-height title">3. MODE DE LIVRAISON</p>
+            <div class="livraison">
+                <form method="get" action="#">
+                    <p class="mention">Choisissez une méthode de livraison pour votre commande</p>
+                    <div class="underline line-height"><label><input type="radio" name="livraison"
+                                value="standard">&nbsp;Livraison standard offerte</label></div>
+                    <div class="underline line-height"><label><input type="radio" name="livraison"
+                                value="expresse">&nbsp;Livraison expresse</label></div>
+                </form>
+
+                <br><br><br>
+                <button><a href="#paiement"> Procéder au paiement </a></button>
+                <br><br><br>
+
+                <!-- FACTURATION ET PAIEMENT  -->
+
+                <p id="paiement" class="underline line-height title">4. FACTURATION ET PAIEMENT</p><br>
+                <p>MODE DE PAIEMENT</p><br>
+                <p><img id="icon" src="img/credit-card.png" alt="img"> &nbsp;PAIEMENT 100 % SÉCURISÉ</p>
+                <p><br>Les données de votre carte bancaire sont envoyées de manière sécurisée. Toutes les
+                    informations sont protégées à l’aide de la technologie Secure Sockets Layer (SSL).</p>
+
+                <form method="get" action="#">
+                    <div class="flex underline mobile-column">
+                        <br>
+                        <div class="line-height small-button">
+                            <label>
+                                <button class="small-button">
+                                    <input type="radio" name="livraison" value="standard">Cartes de paiement
+                                </button>
+                            </label>
+                        </div>
+
+
+                        <div class="line-height small-button">
+                            <label>
+                                <button class="small-button s-padding">
+                                    <div class="flex">
+                                        <div class="flex paypal">
+                                            <input type="radio" name="livraison" value="expresse">
+
+                                            <img src="img/paypal-logo-vector.svg" alt="Paypal">
+                                            <br>
+                                        </div>
+                                    </div>
+                                </button>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Cards -->
+
+            <div class="cards flex-1">
+                    <img class="visa" src="img/visa-2.png" alt="VISA">
+                    <img class="master" src="img/Mastercard-logo.svg.png" alt="MASTER">
+                    <img class="amex" src="img/amex.png" alt="amex">
+            </div>
+
+            <input type="numero" placeholder="* Numéro de la carte">
+            <input type="titulaire" placeholder="* Titulaire de la carte">
+            <div class="flex">
+                <input type="exp" placeholder="* Date d’expiration">
+                <input type="cryptogramme" placeholder="* Cryptogramme">
+            </div>
+
+            <button type="button" onclick="location.href='confirm.html'">Payer et passer une commande</button>
+            <br>
+            <p class="mention">En cliquant sur «Payer», je confirme avoir lu et accepté les conditions générales de vente et j'accepte le traitement de mes données personnelles par Christian Dior Couture dans les thermes énoncés des conditions générales de vente, dans les objectifs détaillés de votre Déclaration de Confidentialité et dans la gestion de ma commande. Si j'ai moins de 16 ans, je confirme avoir le consentement parental pour divulguer mes données personnelles. Conformément aux lois et réglementations en vigueur, vous avez le droit d'accéder, de corriger et de supprimer toutes les données qui peuvent vous concerner. Vous pouvez également nous demander de ne pas vous envoyer de communications personnalisées sur nos produits et services. Ce droit peut être exercé à tout moment en nous envoyant un avis à notre section Contact dans notre Déclaration de Confidentialité.</p>
+
+        </section>
+
+        <!-- INFO ARTICLE -->
+        <div class="column start flex">
+            <div class="column">
+                <section id="info-article">
+                    <div class="flex">
+                        <div class="column">
+                            <p>VOS ARTICLES</p><br>
+                            <img src="img/produit.png" alt="product"><br>
+                        </div>
+
+                        <div class="flex">
+                            <div class="column">
+                                <p class="title">Nom du produit</p>
+                                <p>Description</p><br>
+                                <p class="title">00.00€</p>
+                                <p>Qté: n</p>
+                            </div>
+                        </div>
+                        <div class="supprimer">
+                            <a href="#" class="border-buttom">Supprimer</a>
+                        </div>
+                </section>
+
+
+                <!-- ===================TOTAL===================== -->
+                <section id="total">
+                    <span>TOTAL</span>
+                    <section class="sous-total">
+                        <p class="space space-1 underline">Sous-total 0.00€</p>
+                        <p class="space space-2 underline">Livraison 0.00€</p>
+                        <p class="space space-3 underline">Taxes-lnclues 0.00€</p>
+                        <p class="space space-4">Total 0.00€</p>
+                    </section>
+                    <br>
+                    <div class="flex">
+                        <section id="bottom-total flex">
+                            <button class="small-button-total" type="button" onclick="location.href='confirm.html'">Payer et passer une commande</button>
+
+                            <p class="mention-total">En passant votre commande, vous acceptez
+                                <a href="#">
+                                    les conditions d'utilisation
+                                </a>
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- mon footer -->
+    <footer>
+        <div class="empty"></div>
+
+        <div class="footerText">
+            <div>
+                <p class="semibold">Collections :</p>
+                <p><a href="#">Casual</a></p>
+                <p><a href="#">Exentrique</a></p>
+                <p><a href="#">Les Basiques</a></p>
+            </div>
+            <div>
+                <p class="semibold">Restez connectés :</p>
+                <p><a href="#">Les Ah-Bas !</a></p>
+                <p><a href="#">Notre Newsletter :</a></p>
+                <form>
+                    <input class="barreEmail" type="email" name="email" placeholder="Email">
+                    <input class="boutton" type="submit">
+                </form>
+            </div>
+            <div>
+                <p class="semibold">La marque :</p>
+                <p><a href="#">A propos</a></p>
+                <p><a href="#">Politique de confidentialité</a></p>
+                <p><a href="#">Mentions légales</a></p>
+                <p><a href="#">Conditions générales de ventes</a></p>
+            </div>
+            <div>
+                <p class="semibold">Ou nous contacter :</p>
+                <p><a href="#">Contact</a></p>
+                <p class="semibold">Nos résaux :</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
